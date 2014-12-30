@@ -3,10 +3,9 @@ package br.com.etyllica.network.lps.model;
 import java.awt.Color;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 
-
-public class Interaction implements Drawable{
+public class Interaction implements Drawable {
 	
 	private Net a;
 	

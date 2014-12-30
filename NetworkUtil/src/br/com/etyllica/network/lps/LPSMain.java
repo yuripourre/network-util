@@ -11,10 +11,11 @@ import java.util.Enumeration;
 import java.util.List;
 
 import br.com.etyllica.Etyllica;
+import br.com.etyllica.context.Application;
 import br.com.etyllica.network.lps.network.IwlistParser;
 import br.com.etyllica.network.lps.network.WifiNetwork;
 
-public class LPSMain extends Etyllica{
+public class LPSMain extends Etyllica {
 
 	private final String ROOT_PASSWORD = "*****";
 	
@@ -22,21 +23,6 @@ public class LPSMain extends Etyllica{
 		super(640, 480);
 	}
 
-	@Override
-	public void startGame() {
-
-		displayInformation();
-		
-		//ifconfig to get InterfaceName
-		
-		
-		
-		List<WifiNetwork> networks = displayWifi(ROOT_PASSWORD, "wlan0");
-				
-		setMainApplication(new LPSApplication(networks));
-
-	}
-	
 	private List<WifiNetwork> displayWifi(String rootPassword, String interfaceName){
 		
 		List<WifiNetwork> list = null;
@@ -110,6 +96,18 @@ public class LPSMain extends Etyllica{
 			System.out.println("InetAddress: "+inetAddress);
 		}
 		System.out.println("");
+	}
+
+	@Override
+	public Application startApplication() {
+		
+		displayInformation();
+		
+		//ifconfig to get InterfaceName
+		
+		List<WifiNetwork> networks = displayWifi(ROOT_PASSWORD, "wlan0");
+				
+		return new LPSApplication(networks);
 	}
 
 

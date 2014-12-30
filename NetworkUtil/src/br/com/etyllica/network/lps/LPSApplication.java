@@ -3,17 +3,17 @@ package br.com.etyllica.network.lps;
 import java.awt.Color;
 import java.util.List;
 
-import br.com.etyllica.core.application.Application;
+import br.com.etyllica.context.Application;
 import br.com.etyllica.core.event.GUIEvent;
 import br.com.etyllica.core.event.KeyEvent;
 import br.com.etyllica.core.event.PointerEvent;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
+import br.com.etyllica.core.graphics.SVGColor;
 import br.com.etyllica.network.lps.model.Interaction;
 import br.com.etyllica.network.lps.model.Net;
 import br.com.etyllica.network.lps.network.WifiNetwork;
-import br.com.etyllica.util.SVGColor;
 
-public class LPSApplication extends Application{
+public class LPSApplication extends Application {
 
 	private Net a;
 	private Net b;

@@ -3,10 +3,10 @@ package br.com.etyllica.network.lps.model;
 import java.awt.Color;
 
 import br.com.etyllica.core.Drawable;
-import br.com.etyllica.core.video.Graphic;
+import br.com.etyllica.core.graphics.Graphic;
 import br.com.etyllica.network.lps.network.WifiNetwork;
 
-public class Net implements Drawable{
+public class Net implements Drawable {
 	
 	private Color color;
 	
